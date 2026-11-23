@@ -2376,6 +2376,6 @@ if __name__ == "__main__":
         asyncio.run(main())
     except OSError as exc:
         print(f"\nFATAL: cannot bind port {PORT}: {exc}")
-        print("Close the other mc_bridge / python using port int(os.getenv("PORT", int(os.getenv("PORT", 3000)))), then retry.")
+        print("Close the other mc_bridge / python, then retry.")
     except KeyboardInterrupt:
         print("\nStopped.")
