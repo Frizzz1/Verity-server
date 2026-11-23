@@ -2365,8 +2365,10 @@ async def main() -> None:
         ping_interval=None,
         ping_timeout=None,
         compression=None,
-        max_size=2**22,
-    ):
+     max_size=2**22,
+     subprotocols=["com.microsoft.minecraft.wsencrypt"],
+ ):
+
         print(f"Listening on {WS_HOST}:{PORT} (this device only)")
         await asyncio.Future()
 
