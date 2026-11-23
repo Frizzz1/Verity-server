@@ -41,7 +41,7 @@ from verity_persona import (
 
 load_dotenv()
 
-PORT = int(os.getenv("VERITY_WS_PORT", "int(os.getenv("PORT", int(os.getenv("PORT", 3000))))"))
+PORT = int(os.getenv("PORT", "3000"))
 # Localhost only — other devices on Wi-Fi cannot /connect to this bridge.
 WS_HOST = (os.getenv("VERITY_WS_HOST", "0.0.0.0").strip() or "0.0.0.0")
 LISTEN_SECONDS = float(os.getenv("VERITY_LISTEN_SECONDS", "5"))
