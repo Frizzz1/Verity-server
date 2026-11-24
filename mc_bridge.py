@@ -174,7 +174,7 @@ async def main() -> None:
     host = os.getenv("HOST", "0.0.0.0")
     port = int(os.getenv("PORT", "8765"))
     print(f"[ws] starting server on {host}:{port}", flush=True)
-    async with websockets.serve(on_minecraft, host, port):
+    async with websockets.serve(on_minecraft, host, port, subprotocols=["com.microsoft.minecraft.ws.v1.0"]):
         await asyncio.Future()  # держим сервер запущенным бесконечно
 
 
