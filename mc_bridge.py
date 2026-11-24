@@ -1,3 +1,8 @@
+import asyncio
+import json
+import os
+from uuid import uuid4
+import websockets
 async def on_minecraft(websocket):
     global _last_talk_at
     remote = getattr(websocket, "remote_address", None)
